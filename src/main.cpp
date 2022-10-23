@@ -280,23 +280,8 @@ void loop()
     delay(20);
     irRecv.resume();
   }
-  /*
-  Data: tim/hum/thời gian
-  mode != 0 -> thay đổi
-  isChangeMode == true
 
-  isChangeMode == false
-    isChangeData == true
-      isChangeMode == true
-        -> change
-      isChangeMode == false và 
-        mode 0
-        mode 1 và denta != 0
-        mode 2, 3 và denta >= 7
-        -> Ko thay đổi
-    isChangeData == false
-  mode == 0 -> ko thay đổi
-  */
+  
   if (isChangeData || isChangeDenta || isChangeMode) {
     Serial.print(isChangeData);
     Serial.print(isChangeDenta);
